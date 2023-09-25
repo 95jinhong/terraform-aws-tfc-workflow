@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "<MY-ORG>"
+    organization = "hongpark"
     hostname     = "app.terraform.io" # default
 
     workspaces {
@@ -17,6 +17,9 @@ terraform {
 
 provider "aws" {
   region = var.region
+  /* shared_config_files = var.aws_config
+  shared_credentials_files = var.aws_credentials
+  profile = "terraform" */
   default_tags {
     tags = {
       Project = "Coffee-Mug-Cake"
